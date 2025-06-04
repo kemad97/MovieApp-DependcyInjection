@@ -10,10 +10,14 @@ import SwiftData
 
 @main
 struct MovieApp_DependcyInjectionApp: App {
- 
+    
     
     var body: some Scene {
         WindowGroup {
-            ContentView(viewModel: DIContainer.shared.resolve(MovieListViewModel.self))        }
+            let viewModel = DIContainer.shared.resolve(MovieListViewModel.self)
+            
+            ContentView(viewModel:viewModel)
+            
+        }
     }
 }

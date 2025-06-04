@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct MovieListView: View {
-    @StateObject private var viewModel : MovieListViewModel
+    @ObservedObject private var viewModel : MovieListViewModel
     
     init(viewModel: MovieListViewModel) {
-        self._viewModel = StateObject(wrappedValue: viewModel)
+        self.viewModel =  viewModel
     }
     
     var body: some View {
@@ -35,12 +35,6 @@ struct MovieListView: View {
         
     }
 }
-/*
-#Preview {
-    MovieListView(viewModel: MovieListViewModel(fetchMoviesUseCase: FetchMoviesUseCase(movieService: MovieService() ) ) )
-    
-}
-*/
 
 struct MovieListView_Previews: PreviewProvider {
     static var previews: some View {
