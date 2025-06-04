@@ -12,10 +12,8 @@ import SwiftData
 struct MovieApp_DependcyInjectionApp: App {
  
     
-    private let coordinator = AppCoordinator()
     var body: some Scene {
         WindowGroup {
-            coordinator.start()
-        }
+            ContentView(viewModel: DIContainer.shared.resolve(MovieListViewModel.self))        }
     }
 }

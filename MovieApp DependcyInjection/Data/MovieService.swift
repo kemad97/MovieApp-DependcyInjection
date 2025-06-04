@@ -15,8 +15,11 @@ class MovieService : MovieServiceProtocol {
     func fetchMovies(completion: @escaping ([Movie]) -> Void) {
             DispatchQueue.main.async {
                 let movies = [
-                    Movie(id: 1, title: "The Matrix", year: 1999),
                     Movie(id: 2, title: "Inception", year: 2010),
+                    Movie(id: 2, title: "Inception", year: 2010),
+                    Movie(id: 2, title: "Inception", year: 2010),
+                    Movie(id: 3, title: "Interstellar", year: 2014),
+                    Movie(id: 3, title: "Interstellar", year: 2014),
                     Movie(id: 3, title: "Interstellar", year: 2014)
                 ]
                 completion(movies)

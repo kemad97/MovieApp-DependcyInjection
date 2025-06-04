@@ -6,16 +6,13 @@
 //
 
 import SwiftUI
-import SwiftData
-
-import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var viewModel: MovieListViewModel
+    @ObservedObject var viewModel: MovieListViewModel
     
     init(viewModel: MovieListViewModel) {
-        self._viewModel = StateObject(wrappedValue: viewModel)
-    }
+            self.viewModel = viewModel
+        }
     
     var body: some View {
         NavigationView {
@@ -37,7 +34,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(viewModel: MovieListViewModel(fetchMoviesUseCase: FetchMoviesUseCase(movieService: MovieService())))
+        //ContentView(viewModel: MovieListViewModel.)
     }
 }
-

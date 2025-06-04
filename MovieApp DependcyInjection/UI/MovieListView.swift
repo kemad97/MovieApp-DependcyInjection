@@ -20,9 +20,7 @@ struct MovieListView: View {
                 VStack{
                     VStack(alignment: .leading) {
                         Text(movie.title)
-                            .font(.headline)
                         Text("Year: \(movie.year)")
-                            .font(.subheadline)
                     }
                 }
                 .navigationTitle("Movies")
