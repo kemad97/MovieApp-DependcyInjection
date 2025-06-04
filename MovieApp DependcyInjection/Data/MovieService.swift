@@ -13,7 +13,7 @@ protocol MovieServiceProtocol {
 
 class MovieService : MovieServiceProtocol {
     func fetchMovies(completion: @escaping ([Movie]) -> Void) {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            DispatchQueue.main.async {
                 let movies = [
                     Movie(id: 1, title: "The Matrix", year: 1999),
                     Movie(id: 2, title: "Inception", year: 2010),
